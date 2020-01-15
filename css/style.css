@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../img/sun_opt.png"), url("../img/bg_opt.png");
+  background-repeat: no-repeat, repeat;
+  background-size: contain, auto;
+  background-position-x: center, center;
+  background-position-y: -500px, top;
+  background-attachment: fixed, fixed;
+}
+
+#hero {
+  height: 860px;
+  overflow: hidden;
+  position: relative;
+}
+
+.layer {
+  background-position: bottom center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 1320px;
+  position: fixed;
+  z-index: -1;
+}
+
+.layer-01 {
+  background-image: url("../img/parallax_gdc_logo_opt.png");
+  background-size: contain;
+}
+
+.layer-02 {
+  background-image: url("../img/parallax_gdc_02_opt.png");
+}
+
+.layer-03 {
+  background-image: url("../img/parallax_gdc_03_opt.png");
+}
+
+.layer-04 {
+  background-image: url("../img/parallax_gdc_04_opt.png");
+}
+
+.layer-05 {
+  background-image: url("../img/parallax_gdc_05_opt.png");
+}
+
+.layer-06 {
+  background-image: url("../img/parallax_gdc_06_opt.png");
+}
+
+.layer-07 {
+  background-image: url("../img/parallax_gdc_07_opt.png");
+}
+
+.plogo {
+  height: 450px;
+}
+
+.large-bleed {
+  position: absolute;
+  bottom: 0;
+}
+
+.bleed img {
+  width: 100%;
+}
+
+.bleed,
+.bleed img {
+  max-width: 1440px;
+  text-align: center;
+  margin: auto;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>ASTRONEER</title>
+</head>
+
+<body>
+    <div id="hero">
+        <div class="layer layer-02" data-type="parallax" data-depth="0.2"></div>
+        <div class="layer layer-03" data-type="parallax" data-depth="0.3"></div>
+        <div class="layer layer-04" data-type="parallax" data-depth="0.4"></div>
+        <div class="layer layer-05" data-type="parallax" data-depth="0.5"></div>
+        <div class="layer layer-01 plogo" data-type="parallax" data-depth="0.7"></div>
+        <div class="layer layer-06" data-type="parallax" data-depth="0.6"></div>
+        <div class="layer layer-07" data-type="parallax" data-depth="0.8"></div>
+        <div class="bleed">
+            <div class="large-bleed">
+                <img src="img/bleed_opt.png" alt="logo">
+            </div>
+        </div>
+    </div>
+
+    <div style="padding-bottom: 500px; background-color: #ECB190; margin-top: -0.3rem;"></div>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            let topDistance;
+            let layers;
+            let depth, i, layer, len, movement, translate3d;
+            topDistance = this.pageYOffset;
+            layers = document.querySelectorAll('[data-type="parallax"]');
+
+            for (i = 0, len = layers.length; i < len; i++) {
+                layer = layers[i];
+                depth = layer.getAttribute('data-depth');
+                movement = -(topDistance * depth);
+                translate3d = "translate3d(0, " + movement + "px, 0)";
+                layer.style["-webkit-transform"] = translate3d;
+                layer.style["-moz-transform"] = translate3d;
+                layer.style["-ms-transform"] = translate3d;
+                layer.style["-o-transform"] = translate3d;
+                layer.style.transform = translate3d;
+            }
+        });
+    </script>
+
+</body>
+
+</html>
